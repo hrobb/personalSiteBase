@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import NavLinks from "./ui/nav-links";
 
-const inter = Inter({ subsets: ["latin"] });
+const helvetica = localFont({ 
+  src: './Helvetica-Light.woff2',
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   title: "Personal Site Base",
@@ -16,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${helvetica.className} antialiased`}>
+        <div className="test">
+          <NavLinks/>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
