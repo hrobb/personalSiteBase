@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import NavLinks from "./ui/nav-links";
+import Header from "./ui/header";
+import Footer from "./ui/footer";
 
 const helvetica = localFont({ 
   src: './Helvetica-Light.woff2',
@@ -21,10 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${helvetica.className} antialiased`}>
-        <div className="test">
-          <NavLinks/>
-        </div>
+        <Header/>
+
         {children}
+        
+        <Footer/>
       </body>
     </html>
   );
