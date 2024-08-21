@@ -16,7 +16,7 @@ export default function Header() {
 	const pathname = usePathname();
 
 	return (
-		<header>
+		<header className='flex flex-col items-center justify-center md:flex-row'>
 			{links.map((link) => {
 				const LinkIcon = link.icon;
 				return (
@@ -24,14 +24,14 @@ export default function Header() {
 					key={link.name}
 					href={link.href}
 					className={clsx(
-						'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+						'flex w-full items-center justify-center gap-2 rounded-sm bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100/70 hover:text-blue-600/70 md:h-14 md:p-2 md:px-3',
 						{
-						'bg-sky-100 text-blue-600': pathname === link.href,
+						'bg-gray-200': pathname === link.href,
 						},
 					)}
 				>
-					<LinkIcon className="w-6" />
-					<p className="hidden md:block">{link.name}</p>
+					<LinkIcon className="w-8" />
+					<p className="">{link.name}</p>
 				</Link>
 				);
 			})}
