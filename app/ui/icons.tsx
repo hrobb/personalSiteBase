@@ -1,4 +1,5 @@
 import {
+	Zap,
 	House,
 	ScrollText,
 	CircleUserRound,
@@ -9,6 +10,7 @@ import {
 } from "lucide-react"
    
 export const Icons = {
+	sampleLogo: Zap,
 	home: House,
 	experience: ScrollText,
 	aboutme: CircleUserRound,
