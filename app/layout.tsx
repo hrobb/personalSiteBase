@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./ui/header";
-import Footer from "./ui/footer";
+import Header from "./ui/navigation/header";
+import Footer from "./ui/navigation/footer";
 
 const helvetica = localFont({ 
   src: './Helvetica-Light.woff2',

@@ -1,0 +1,19 @@
+{
+	"home": {
+		"cards": [
+			{
+				"id": 1,
+				"title": "Testing Left Card",
+				"text": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and all data that will populate these objects throughout our time doing this.",
+				"imgSrc": "/next.svg",
+				"altText": "Filler logo?"
+			}
+		]
+	},
+	"experience": [
+
+	],
+	"aboutme": [
+
+	]
+}

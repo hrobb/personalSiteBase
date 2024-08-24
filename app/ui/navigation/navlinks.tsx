@@ -12,29 +12,29 @@ const links = [
 	{ name: 'About Me', href: '/aboutme', icon: Icons.aboutme },
   ];
 
-export default function Header() {
+export default function Navlinks() {
 	const pathname = usePathname();
 
 	return (
-		<header>
+		<>
 			{links.map((link) => {
 				const LinkIcon = link.icon;
 				return (
-				<Link
-					key={link.name}
-					href={link.href}
-					className={clsx(
-						'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
-						{
-						'bg-sky-100 text-blue-600': pathname === link.href,
-						},
-					)}
-				>
-					<LinkIcon className="w-6" />
-					<p className="hidden md:block">{link.name}</p>
-				</Link>
+					<Link
+						key={link.name}
+						href={link.href}
+						className={clsx(
+							'flex w-full items-center justify-center gap-2 rounded-sm bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100/70 hover:text-blue-600/70 sm:h-14 sm:p-2 sm:px-3',
+							{
+							'bg-gray-200': pathname === link.href
+							},
+						)}
+					>
+						<LinkIcon className="w-8" />
+						<p className="">{link.name}</p>
+					</Link>
 				);
 			})}
-		</header>
+		</>
 	);
 }
