@@ -59,7 +59,7 @@ export default function Header() {
 				</div>
 			</div>
 			{nav && (
-				<div className={`${slide ? 'animate-slide-in-from-above' : ''}`}>
+				<div className={`${slide ? 'animate-slide-in-from-above pointer-events-none cursor-default' : ''}`}>
 					<Navlinks/>
 				</div>
 			)}
