@@ -14,7 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        'slide-in-from-above': 'slideInFromAbove 0.5s ease-out forwards'
+        'slide-in-from-above': 'slideInFromAbove 0.5s ease-out forwards',
+        'width-transition': 'width 0.5s ease-in-out'
       },
       keyframes: {
         slideInFromAbove: {

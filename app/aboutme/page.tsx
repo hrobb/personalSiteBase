@@ -1,10 +1,10 @@
 
-import data from "./data.json";
+import data from "../data.json";
 import TextSection from "../ui/textsection";
 import Image from 'next/image';
 import { Underline } from "lucide-react";
 
-export default function Page() {
+export default function AboutMe() {
 	const cards = data.aboutme.textsections;
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between p-24">
