@@ -66,7 +66,7 @@ export default function ExperienceCard({
 					</div>
 				</div>
 				{expand && (
-					<div className='mx-auto text-justify p-2'>
+					<div className='mx-auto p-2'>
 						<p>{longText}</p>
 					</div>
 				)}

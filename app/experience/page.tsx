@@ -1,16 +1,25 @@
 import data from '../data.json';
+import SummaryCard from '../ui/experience/summaryCard';
 import ExperienceCard from '../ui/experience/experienceCard';
 
 
 export default function Experience() {
-	const cards = data.experience.expCards;
+	const summaryCard = data.experience.summaryCards;
+	const expCards = data.experience.expCards;
 	
 	return (
-		<div className='relative min-h-screen h-full max-w-9xl'>
-			<div className="absolute top-0 bottom-0 left-1/2 w-1 bg-gray-500 z-[-1]"></div>
+		<main className='relative min-h-screen h-full max-w-9xl'>
+			<div className='flex items-center justify-between px-16 py-4 sm:px-24'>
+				<SummaryCard
+					title = {summaryCard[0].title}
+					text = {summaryCard[0].text}
+				/>
+			</div>
+			
+			<div className="absolute top-20 bottom-0 left-1/2 w-1 bg-gray-500 z-[-1]"></div>
 
-			<main className="flex flex-col items-center justify-between p-16 sm:p-24">
-				{cards.map((card, index) => (
+			<div className="flex flex-col items-center justify-between px-16 py-4 sm:px-24">
+				{expCards.map((card, index) => (
 					<ExperienceCard
 						key={index}
 						index={index}
@@ -22,7 +31,7 @@ export default function Experience() {
 						altText={card.altText}
 					/>
 				))}
-			</main>
-		</div>
+			</div>
+		</main>
 	)
 }
