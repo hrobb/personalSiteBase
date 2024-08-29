@@ -12,9 +12,12 @@ export default function Experience() {
 			<main className="flex flex-col items-center justify-between p-16 sm:p-24">
 				{cards.map((card, index) => (
 					<ExperienceCard
+						key={index}
+						index={index}
 						orientation={index % 2 == 0 ? 'left' : 'right'}
 						title={card.title}
-						text={card.text}
+						shortText={card.shortText}
+						longText={card.longText}
 						imgSrc={card.imgSrc}
 						altText={card.altText}
 					/>

@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-//import Logo from "./logo";
 import Navlinks from "./navlinks";
-//import MobileMenu from "./mobilemenu";
 import {Icons} from "../icons";
-import { LinkIcon } from "lucide-react";
 
 export default function Header() {
 	const [nav,setNav] = useState(false);
