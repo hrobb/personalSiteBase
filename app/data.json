@@ -13,9 +13,15 @@
 	"experience": {
 		"summaryCards": [
 			{
-				"id": 2,
+				"id": "summary",
 				"title": "Summary",
 				"text": "Vel vel est tempora sit et. Sapiente dolores sit voluptatum quae perferendis quas. Nisi qui provident aut. Ratione unde consequatur velit error in assumenda non quia. Rerum ex qui soluta est deleniti. Velit expedita eum ut molestiae ab doloremque."
+			},
+
+			{
+				"id": "future",
+				"title": "Future Plans",
+				"text": "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui efficitur sit interdum ante at turpis primis enim tortor. Duis primis himenaeos sagittis vivamus eu auctor ipsum sodales. Class torquent nibh integer eleifend fames. Vivamus risus augue tristique aliquet blandit. Id sollicitudin platea non curae interdum. Taciti blandit fames augue ante molestie elit est."
 			}
 		],
 		"expCards": [
@@ -40,6 +46,15 @@
 			{
 				"id": 4,
 				"title": "Experience Card #3",
+				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and this.",
+				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suscipit tempor habitasse vestibulum pellentesque proin morbi? Id mi hendrerit maecenas at pellentesque consequat feugiat vulputate. Nec curabitur fames condimentum sodales montes ut ad arcu habitasse. Nibh ut dictum, mollis fringilla aenean purus. Ac conubia in senectus class justo vel elementum. Rutrum volutpat potenti pulvinar elementum varius curae; lacinia mollis ut. Scelerisque augue class; maecenas fusce nulla nec.",
+				"imgSrc": "/next.svg",
+				"altText": "Filler logo?"
+			},
+
+			{
+				"id": 5,
+				"title": "Experience Card #4",
 				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and this.",
 				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suscipit tempor habitasse vestibulum pellentesque proin morbi? Id mi hendrerit maecenas at pellentesque consequat feugiat vulputate. Nec curabitur fames condimentum sodales montes ut ad arcu habitasse. Nibh ut dictum, mollis fringilla aenean purus. Ac conubia in senectus class justo vel elementum. Rutrum volutpat potenti pulvinar elementum varius curae; lacinia mollis ut. Scelerisque augue class; maecenas fusce nulla nec.",
 				"imgSrc": "/next.svg",

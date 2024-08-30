@@ -49,7 +49,7 @@ export default function ExperienceCard({
 			{/* Experience Card content */}
 			<div
 				onClick={handleClick} 
-				className='flex flex-col max-w-full mx-auto max-w-xl transition transition-transform hover:scale-105 bg-white border-4 border-gray-500 rounded-lg m-6 p-6 cursor-pointer'>
+				className='flex flex-col max-w-full mx-auto max-w-xl transition transition-transform hover:scale-105 bg-white border-4 border-gray-500 rounded-lg m-6 p-6 drop-shadow cursor-pointer'>
 				<div className='flex flex-col md:flex-row mx-auto overflow-x-auto justify-center items-center'>
 					<div className='flex justify-center md:w-1/4 p-5'>
 						<Image

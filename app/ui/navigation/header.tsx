@@ -37,7 +37,7 @@ export default function Header() {
 	})
 
 	return (
-		<header className="bg-gray-200">
+		<header className="p-2 bg-gray-200">
 			<div className="h-full px-4 flex flex-row items-center justify-between sm:justify-center">
 				<div className="flex p-4">
 					<SiteLogo className="w-10 h-10"/>
