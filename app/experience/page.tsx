@@ -17,7 +17,7 @@ export default function Experience() {
 				/>
 			</div>
 			
-			<div className="absolute top-20 bottom-20 left-1/2 w-1 bg-gray-500 z-[-1]"></div>
+			<div className="absolute top-20 bottom-44 left-1/2 w-1 bg-gray-500 z-[-1]"></div>
 
 			<div className="flex flex-col items-center justify-between px-16 py-4 sm:px-24">
 				{expCards.map((card, index) => (
@@ -39,6 +39,13 @@ export default function Experience() {
 					title = {futureCard.title}
 					text = {futureCard.text}
 				/>
+			</div>
+
+			<div className='flex flex-col items-center justify-between px-16 pt-4 pb-8 sm:px-24'>
+				<div className='max-w-full sm:w-4xl bg-red-400/50 border-[3px] border-gray-500 rounded-lg text-center p-4'>
+					{/* Going to add an API route for this instead so it isn't sitting in the public folder */}
+					<p>Interested in checking out my professional resume? Feel free to download a copy <a href='resume.pdf'>here</a>!</p>
+				</div>
 			</div>
 		</main>
 	)
