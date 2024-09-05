@@ -44,7 +44,7 @@ export default function Experience() {
 			<div className='flex flex-col items-center justify-between px-16 pt-4 pb-8 sm:px-24'>
 				<div className='max-w-full sm:w-4xl bg-red-400/50 border-[3px] border-gray-500 rounded-lg text-center p-4'>
 					{/* Going to add an API route for this instead so it isn't sitting in the public folder */}
-					<p>Interested in checking out my professional resume? Feel free to download a copy <a href='resume.pdf'>here</a>!</p>
+					<p>Interested in checking out my professional resume? Feel free to download a copy <a href='/api/pdfDownload' download className='text-blue-500 hover:text-blue-700 visited:text-purple-600'>here</a>!</p>
 				</div>
 			</div>
 		</main>
