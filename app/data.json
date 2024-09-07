@@ -10,10 +10,65 @@
 			}
 		]
 	},
-	"experience": [
+	"experience": {
+		"summaryCards": [
+			{
+				"id": "summary",
+				"title": "Summary",
+				"text": "Vel vel est tempora sit et. Sapiente dolores sit voluptatum quae perferendis quas. Nisi qui provident aut. Ratione unde consequatur velit error in assumenda non quia. Rerum ex qui soluta est deleniti. Velit expedita eum ut molestiae ab doloremque."
+			},
 
-	],
-	"aboutme": [
+			{
+				"id": "future",
+				"title": "Future Plans",
+				"text": "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui efficitur sit interdum ante at turpis primis enim tortor. Duis primis himenaeos sagittis vivamus eu auctor ipsum sodales. Class torquent nibh integer eleifend fames. Vivamus risus augue tristique aliquet blandit. Id sollicitudin platea non curae interdum. Taciti blandit fames augue ante molestie elit est."
+			}
+		],
+		"expCards": [
+			{
+				"id": 2,
+				"title": "Place of Education",
+				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and all data that will populate these objects throughout our time doing this.",
+				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Quisque convallis curae commodo nec hendrerit aptent ante suspendisse elit. Eleifend dignissim pulvinar phasellus bibendum dictum. Sociosqu at class per nunc mauris. Elementum augue fames mattis dapibus montes ex mattis sagittis consequat. Consectetur nunc pellentesque consectetur gravida; ridiculus nisi neque per. Ac commodo luctus inceptos tellus elementum convallis dapibus. Euismod sodales fusce tortor ex quisque? Risus tempus hac penatibus; lobortis per dis suspendisse.",
+				"imgSrc": "/school.png",
+				"altText": "Filler logo?"
+			},
 
-	]
+			{
+				"id": 3,
+				"title": "Experience Card #2",
+				"shortText": "Here's a bunch of test textenient to store any and all data that will populate these objects throughout our time doing this.",
+				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Et quis imperdiet, nec ultricies efficitur \n montes at aptent. Suscipit tempor morbi congue nascetur nascetur eget. Neque praesent himenaeos ultricies; sagittis porta consequat bibendum. Placerat placerat placerat finibus, magna felis euismod ornare eleifend. Maecenas tortor arcu ullamcorper id augue bibendum? Euismod eleifend non placerat ipsum placerat auctor ante. Pellentesque torquent mollis euismod rhoncus montes pretium. Tristique luctus litora mauris condimentum sagittis inceptos etiam vel.",
+				"imgSrc": "/next.svg",
+				"altText": "Filler logo?"
+			},
+
+			{
+				"id": 4,
+				"title": "Experience Card #3",
+				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and this.",
+				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suscipit tempor habitasse vestibulum pellentesque proin morbi? Id mi hendrerit maecenas at pellentesque consequat feugiat vulputate. Nec curabitur fames condimentum sodales montes ut ad arcu habitasse. Nibh ut dictum, mollis fringilla aenean purus. Ac conubia in senectus class justo vel elementum. Rutrum volutpat potenti pulvinar elementum varius curae; lacinia mollis ut. Scelerisque augue class; maecenas fusce nulla nec.",
+				"imgSrc": "/next.svg",
+				"altText": "Filler logo?"
+			},
+
+			{
+				"id": 5,
+				"title": "Experience Card #4",
+				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and this.",
+				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suscipit tempor habitasse vestibulum pellentesque proin morbi? Id mi hendrerit maecenas at pellentesque consequat feugiat vulputate. Nec curabitur fames condimentum sodales montes ut ad arcu habitasse. Nibh ut dictum, mollis fringilla aenean purus. Ac conubia in senectus class justo vel elementum. Rutrum volutpat potenti pulvinar elementum varius curae; lacinia mollis ut. Scelerisque augue class; maecenas fusce nulla nec.",
+				"imgSrc": "/next.svg",
+				"altText": "Filler logo?"
+			}
+		]
+	},
+	"aboutme": {
+		"textsections": [
+			{
+				"id": 1,
+				"title": "Biography",
+				"text": "Vel vel est tempora sit et. Sapiente dolores sit voluptatum quae perferendis quas. Nisi qui provident aut. Ratione unde consequatur velit error in assumenda non quia. Rerum ex qui soluta est deleniti. Velit expedita eum ut molestiae ab doloremque."
+			}
+		]
+	}
 }

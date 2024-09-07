@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-//import Logo from "./logo";
 import Navlinks from "./navlinks";
-//import MobileMenu from "./mobilemenu";
 import {Icons} from "../icons";
-import { LinkIcon } from "lucide-react";
 
 export default function Header() {
 	const [nav,setNav] = useState(false);
@@ -41,7 +37,7 @@ export default function Header() {
 	})
 
 	return (
-		<header className="bg-gray-200">
+		<header className="p-2 bg-gray-200">
 			<div className="h-full px-4 flex flex-row items-center justify-between sm:justify-center">
 				<div className="flex p-4">
 					<SiteLogo className="w-10 h-10"/>
