@@ -63,22 +63,30 @@
 		]
 	},
 	"skills": {
-		"frontend": [
+		"frontEnd": [
 			{
 				"id": 10,
-				"title": "HTML"
+				"title": "HTML",
+				"iconName": "htmlLogo"
+			},
+			{
+				"id": 13,
+				"title": "CSS",
+				"iconName": "cssLogo"
 			}
 		],
-		"backend": [
+		"backEnd": [
 			{
 				"id": 11,
-				"title": "SQL"
+				"title": "SQL",
+				"iconName": "sqlLogo"
 			}
 		],
-		"third": [
+		"otherSkills": [
 			{
 				"id": 12,
-				"title": "Documentation"
+				"title": "Documentation",
+				"iconName": "documentation"
 			}
 		]
 	},

@@ -1,3 +1,4 @@
+// Lucide
 import {
 	Zap,
 	House,
@@ -9,7 +10,7 @@ import {
 	ChevronLeft,
 	ChevronRight
 } from "lucide-react"
-   
+
 export const Icons = {
 	sampleLogo: Zap,
 	home: House,
@@ -19,5 +20,30 @@ export const Icons = {
 	close: X,
 	copy: Copy,
 	chevronLeft: ChevronLeft,
-	chevronRight: ChevronRight
+	chevronRight: ChevronRight,
+}
+
+// React Icons
+import {IconType} from 'react-icons';
+
+import {
+	DiHtml5,
+	DiCss3,
+	DiMysql
+} from "react-icons/di"
+
+import {
+	SiMicrosoftonenote
+} from "react-icons/si"
+
+// New type to make them indexable
+export type ReactIconsType = {
+	[key: string]: IconType;
+}
+
+export const ReactIcons: ReactIconsType = {
+	htmlLogo: DiHtml5,
+	cssLogo: DiCss3,
+	sqlLogo: DiMysql,
+	documentation: SiMicrosoftonenote
 }
