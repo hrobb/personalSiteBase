@@ -33,7 +33,10 @@ import {
 } from "react-icons/di"
 
 import {
-	SiMicrosoftonenote
+	SiJavascript,
+	SiPython,
+	SiMicrosoftonenote,
+	SiPostman
 } from "react-icons/si"
 
 // New type to make them indexable
@@ -44,6 +47,9 @@ export type ReactIconsType = {
 export const ReactIcons: ReactIconsType = {
 	htmlLogo: DiHtml5,
 	cssLogo: DiCss3,
+	jsLogo: SiJavascript,
 	sqlLogo: DiMysql,
-	documentation: SiMicrosoftonenote
+	pythonLogo: SiPython,
+	documentation: SiMicrosoftonenote,
+	postman: SiPostman
 }

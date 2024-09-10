@@ -4,13 +4,17 @@ export interface Skill {
 	id: number;
 	title: string;
 	iconName: string;
+	description?: string;
+	projects?: string[];
 }
 
 export default function CategoryContainer({
 	categoryTitle,
+	description,
 	skillSet
 }: {
 	categoryTitle: string,
+	description: string,
 	skillSet: Skill[]
 }) {
 
@@ -26,6 +30,7 @@ export default function CategoryContainer({
 	return (
 		<div className='container flex flex-col p-8'>
 			<h1 className='text-xl text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
+			<p className='text-center md:text-left md:ml-16'>{description}</p>
 			<div className='flex flex-wrap justify-center md:justify-evenly'>
 				{skillSet.map((skill, index) => (
 					<SkillCard
@@ -33,6 +38,8 @@ export default function CategoryContainer({
 						id={skill.id}
 						title={skill.title}
 						iconName={skill.iconName}
+						description={skill.description}
+						projects={skill.projects}
 					/>
 				))}
 			</div>
