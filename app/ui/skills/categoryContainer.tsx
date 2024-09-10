@@ -24,9 +24,9 @@ export default function CategoryContainer({
 	};
 
 	return (
-		<div className='container flex flex-col justify-around'>
-			<h1>{formatTitle(categoryTitle)}</h1>
-			<div className='flex'>
+		<div className='container flex flex-col p-8'>
+			<h1 className='text-xl text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
+			<div className='flex flex-wrap justify-center md:justify-evenly'>
 				{skillSet.map((skill, index) => (
 					<SkillCard
 						key={index}

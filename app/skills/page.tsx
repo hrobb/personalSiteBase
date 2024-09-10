@@ -5,8 +5,8 @@ export default function Skills() {
 	const categories = data.skills;
 	
 	return (
-		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between p-24">
-			<h1>Skills</h1>
+		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between px-16 py-16 sm:px-24">
+			<h1 className='text-3xl font-bold'>Skills</h1>
 
 			{Object.entries(categories).map(([category, skills]) => (
 				<CategoryContainer
