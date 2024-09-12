@@ -29,7 +29,7 @@ export default function CategoryContainer({
 
 	return (
 		<div className='container flex flex-col p-8'>
-			<h1 className='text-xl text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
+			<h1 className='text-xl font-bold text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
 			<p className='text-center md:text-left md:ml-16'>{description}</p>
 			<div className='flex flex-wrap justify-center md:justify-evenly'>
 				{skillSet.map((skill, index) => (

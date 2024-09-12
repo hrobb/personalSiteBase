@@ -49,7 +49,7 @@ export default function ExperienceCard({
 			{/* Experience Card content */}
 			<div
 				onClick={handleClick} 
-				className='flex flex-col max-w-full mx-auto max-w-xl transition transition-transform hover:scale-105 bg-white border-4 border-gray-500 rounded-lg m-6 p-6 drop-shadow cursor-pointer'>
+				className='flex flex-col max-w-full mx-auto max-w-xl transition transition-transform ease-in-out duration-200 hover:scale-105 bg-white border-4 border-gray-500 rounded-lg m-6 p-6 drop-shadow cursor-pointer overflow-hidden'>
 				<div className='flex flex-col md:flex-row mx-auto overflow-x-auto justify-center items-center'>
 					<div className='flex justify-center md:w-1/4 p-5'>
 						<Image
@@ -65,11 +65,13 @@ export default function ExperienceCard({
 						<p>{shortText}</p>
 					</div>
 				</div>
-				{expand && (
+
+				<div className={`transition-max-height duration-[600ms] ease-in-out overflow-hidden ${expand ? 'max-h-screen' : 'max-h-0'}`}>
 					<div className='mx-auto p-2'>
-						<p>{longText}</p>
+					<p>{longText}</p>
 					</div>
-				)}
+				</div>
+
 				{expandNotice && (
 					<div className='text-center pt-4 text-sm text-gray-700 italic'>
 						<p>Click to expand...</p>

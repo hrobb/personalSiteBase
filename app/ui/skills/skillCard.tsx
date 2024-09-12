@@ -44,7 +44,7 @@ export default function SkillCard ({
 							<p className="text-lg">Experience/Projects:</p>
 							<ul className="list-disc list-inside">
 								{projects.map((project, index) => (
-									<li>{project}</li>
+									<li key={index}>{project}</li>
 								))}
 							</ul>
 						</>
