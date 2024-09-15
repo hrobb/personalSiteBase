@@ -7,6 +7,9 @@ import {
 	CircleUserRound,
 	X,
 	Copy,
+	Code,
+	Calendar,
+	MapPin,
 	ChevronLeft,
 	ChevronRight
 } from "lucide-react"
@@ -19,6 +22,9 @@ export const Icons = {
 	aboutme: CircleUserRound,
 	close: X,
 	copy: Copy,
+	code: Code,
+	timeframe: Calendar,
+	location: MapPin,
 	chevronLeft: ChevronLeft,
 	chevronRight: ChevronRight,
 }

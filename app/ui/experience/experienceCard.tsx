@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import { Icons } from '../icons';
 import { useEffect, useState } from "react";
 import clsx from 'clsx';
 
@@ -8,19 +9,29 @@ export default function ExperienceCard({
 	index,
 	orientation,
 	title,
-	shortText,
-	longText,
 	imgSrc,
-	altText
+	altText,
+	skillsUsed,
+	timeframe,
+	location,
+	shortText,
+	longText
 }: {
 	index: number,
 	orientation: 'left' | 'right';
 	title: string;
-	shortText: string;
-	longText: string;
 	imgSrc: string;
 	altText: string;
+	skillsUsed: string;
+	timeframe: string;
+	location: string;
+	shortText: string;
+	longText: string;
 }) {
+	const SkillsIcon = Icons.code;
+	const Timeframe = Icons.timeframe;
+	const Location = Icons.location;
+
 	const [expand, setExpand] = useState(false);
 	const [expandNotice, disableNotice] = useState(true && index == 0);
 
@@ -50,7 +61,7 @@ export default function ExperienceCard({
 			<div
 				onClick={handleClick} 
 				className='flex flex-col max-w-full mx-auto max-w-xl transition transition-transform ease-in-out duration-200 hover:scale-105 bg-white border-4 border-gray-500 rounded-lg m-6 p-6 drop-shadow cursor-pointer overflow-hidden'>
-				<div className='flex flex-col md:flex-row mx-auto overflow-x-auto justify-center items-center'>
+				<div className='flex flex-col md:flex-row overflow-x-auto justify-center items-center'>
 					<div className='flex justify-center md:w-1/4 p-5'>
 						<Image
 							src={imgSrc}
@@ -61,8 +72,22 @@ export default function ExperienceCard({
 						/>
 					</div>
 					<div className="md:w-3/4 p-2">
-						<h1 className='text-2xl font-bold'>{title}</h1>
-						<p>{shortText}</p>
+						<h1 className='text-2xl font-bold pb-2'>{title}</h1>
+						<div className='pb-2'>
+							<p>{shortText}</p>
+						</div>
+						<div className='flex justify-start items-center pb-2'>
+							<SkillsIcon className="flex-shrink-0 w-1/6 h-1/6 sm:w-10 sm:h-10 p-1"></SkillsIcon>
+							<p className='sm:text-lg p-1'>{skillsUsed}</p>
+						</div>
+						<div className='flex justify-start items-center pb-2'>
+							<Timeframe className="flex-shrink-0 w-1/6 h-1/6 sm:w-10 sm:h-10 p-1"></Timeframe>
+							<p className='sm:text-lg p-1'>{timeframe}</p>
+						</div>
+						<div className='flex justify-start items-center pb-2'>
+							<Location className="flex-shrink-0 w-1/6 h-1/6 sm:w-10 sm:h-10 p-1"></Location>
+							<p className='sm:text-lg p-1'>{location}</p>
+						</div>
 					</div>
 				</div>
 

@@ -17,7 +17,7 @@ export default function Experience() {
 				/>
 			</div>
 			
-			<div className="absolute top-20 bottom-44 left-1/2 w-1 bg-gray-500 z-[-1]"></div>
+			<div className="absolute top-20 bottom-20 sm:bottom-44 left-1/2 w-1 bg-gray-500 z-[-1]"></div>
 
 			<div className="flex flex-col items-center justify-between px-16 py-4 sm:px-24">
 				{expCards.map((card, index) => (
@@ -26,10 +26,13 @@ export default function Experience() {
 						index={index}
 						orientation={index % 2 == 0 ? 'left' : 'right'}
 						title={card.title}
-						shortText={card.shortText}
-						longText={card.longText}
 						imgSrc={card.imgSrc}
 						altText={card.altText}
+						skillsUsed = {card.skillsUsed}
+						timeframe = {card.timeframe}
+						location = {card.location}
+						shortText={card.shortText}
+						longText={card.longText}
 					/>
 				))}
 			</div>
@@ -42,7 +45,7 @@ export default function Experience() {
 			</div>
 
 			<div className='flex flex-col items-center justify-between px-16 pt-4 pb-8 sm:px-24'>
-				<div className='max-w-full sm:w-4xl bg-red-400/50 border-[3px] border-gray-500 rounded-lg text-center p-4'>
+				<div className='max-w-full sm:w-4xl bg-red-200 sm:bg-red-400/50 border-[3px] border-gray-500 rounded-lg text-center p-4'>
 					<p>Interested in checking out my professional resume? Feel free to download a copy <a href='/api/pdfDownload' download className='text-blue-500 hover:text-blue-700 visited:text-purple-600'>here</a>!</p>
 				</div>
 			</div>
