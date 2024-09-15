@@ -1,0 +1,21 @@
+/* CSS Utilities that aren't included in tailwind for animation */
+.cardContainer {
+	perspective: 1000px;
+}
+  
+.card {
+	transform-style: preserve-3d;
+}
+  
+.card.flipped {
+	transform: rotateY(180deg);
+}
+  
+.cardFront,
+.cardBack {
+	backface-visibility: hidden;
+}
+
+.cardBack {
+	transform: rotateY(180deg);
+}

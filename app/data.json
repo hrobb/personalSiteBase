@@ -62,6 +62,109 @@
 			}
 		]
 	},
+	"skills": {
+		"frontEnd": {
+			"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo rhoncus nisi finibus maximus, adipiscing bibendum posuere bibendum. Finibus netus amet ornare pellentesque integer. Id sit fringilla lobortis adipiscing egestas class. Congue suspendisse vitae diam cursus convallis pharetra. Nisl cursus praesent fringilla luctus montes torquent. Ante habitant feugiat nibh curabitur, condimentum senectus hac malesuada.",
+			"skills": [
+				{
+					"id": 10,
+					"title": "HTML",
+					"iconName": "htmlLogo",
+					"description": "HTML is fun",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				},
+				{
+					"id": 10,
+					"title": "HTML",
+					"iconName": "htmlLogo",
+					"description": "",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				},
+				{
+					"id": 10,
+					"title": "HTML",
+					"iconName": "htmlLogo",
+					"description": ""
+				},
+				{
+					"id": 13,
+					"title": "CSS",
+					"iconName": "cssLogo",
+					"description": "",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				},
+				{
+					"id": 13,
+					"title": "Javascript",
+					"iconName": "jsLogo",
+					"description": "JS is a lot of fun",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				}
+			]
+		},
+		"backEnd": {
+			"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Pharetra volutpat rhoncus ullamcorper vestibulum tempor ex est. In sollicitudin sagittis aptent nec, eros dictum. Magna donec massa, mollis ultrices accumsan odio. At lacus scelerisque ut himenaeos luctus enim. Interdum volutpat egestas congue ipsum donec tellus. Mauris lorem sapien facilisis mattis ridiculus a feugiat. Vehicula augue habitant augue efficitur ultrices magnis quam pulvinar. Egestas sed habitant ante dapibus ornare.",
+			"skills": [
+				{
+					"id": 11,
+					"title": "SQL",
+					"iconName": "sqlLogo",
+					"description": "",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				},
+				{
+					"id": 11,
+					"title": "Python",
+					"iconName": "pythonLogo",
+					"description": "",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				}
+			]
+		},
+		"otherSkills": {
+			"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Integer lacinia in penatibus sagittis vulputate malesuada porttitor magnis. Litora commodo per potenti felis metus eget morbi interdum. Id nam scelerisque litora natoque pharetra, torquent at. Dui duis amet auctor non purus lacus quis. Scelerisque pulvinar dis efficitur vestibulum cubilia. Nostra ornare posuere dui integer at finibus.",
+			"skills": [
+				{
+					"id": 12,
+					"title": "Documentation",
+					"iconName": "documentation",
+					"description": "",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				},
+				{
+					"id": 12,
+					"title": "Postman",
+					"iconName": "postman",
+					"description": "",
+					"projects": [
+						"Experience 1",
+						"Sample Project 1"
+					]
+				}
+			]
+		}
+	},
 	"aboutme": {
 		"textsections": [
 			{
