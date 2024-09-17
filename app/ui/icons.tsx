@@ -39,6 +39,8 @@ import {
 } from "react-icons/di"
 
 import {
+	SiGithub,
+	SiLinkedin,
 	SiJavascript,
 	SiPython,
 	SiMicrosoftonenote,
@@ -51,6 +53,8 @@ export type ReactIconsType = {
 }
 
 export const ReactIcons: ReactIconsType = {
+	githubLogo: SiGithub,
+	linkedInLogo: SiLinkedin,
 	htmlLogo: DiHtml5,
 	cssLogo: DiCss3,
 	jsLogo: SiJavascript,
