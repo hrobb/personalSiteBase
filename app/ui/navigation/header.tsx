@@ -8,7 +8,9 @@ import { IconType } from 'react-icons';
 
 export default function Header() {
 	const [nav,setNav] = useState(false);
-	const [slide,triggerSlide] = useState(false);
+	const [slideIn,triggerSlideIn] = useState(false);
+	const [slideOut, triggerSlideOut] = useState(false);
+
 	const SiteLogo = Icons.sampleLogo;
 	const NavOpen = Icons.chevronLeft;
 	const NavClose = Icons.close;
@@ -20,12 +22,21 @@ export default function Header() {
 	const linkedInLink = "https://www.linkedin.com";
 
 	const handleSideMenu = () => {
-		setNav(!nav);
-		triggerSlide(true);
 
-		setTimeout(() => {
-			triggerSlide(false);
-		}, 500);
+		// If the nav is open, slide out animation, otherwise slide in
+		if (nav) {
+			triggerSlideOut(true);
+			setTimeout(() => {
+				setNav(false);
+				triggerSlideOut(false);
+			}, 500);
+		} else {
+			setNav(true);
+			triggerSlideIn(true);
+			setTimeout(() => {
+				triggerSlideIn(false);
+			}, 500);
+		}
 	}
 
 	// Be sure to turn off the nav if window is expanded
@@ -72,7 +83,7 @@ export default function Header() {
 				</div>
 			</div>
 			{nav && (
-				<div className={`${slide ? 'animate-slide-in-from-above pointer-events-none cursor-default' : ''}`}>
+				<div className={`${slideIn ? 'animate-slide-in-from-above pointer-events-none cursor-default' : ''} ${slideOut ? 'animate-slide-out-to-above pointer-events-none cursor-default' : ''}`}>
 					<Navlinks/>
 				</div>
 			)}

@@ -15,12 +15,17 @@ const config: Config = {
       },
       animation: {
         'slide-in-from-above': 'slideInFromAbove 0.5s ease-out forwards',
+        'slide-out-to-above': 'slideOutToAbove 0.5s ease-out forwards',
         'width-transition': 'width 0.5s ease-in-out'
       },
       keyframes: {
         slideInFromAbove: {
           '0%': {transform: 'translateY(-100%)', opacity: '0'},
           '100%': { transform: 'translateY(0)', opacity: '1' }
+        },
+        slideOutToAbove: {
+          '0%': {transform: 'translateY(0)', opacity: '1'},
+          '100%': { transform: 'translateY(-100%)', opacity: '0' }
         }
       }
     },
