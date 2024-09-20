@@ -73,7 +73,7 @@ export default function Header() {
 					{nav ? <NavClose className="w-10 h-10" /> : <NavOpen className="w-10 h-10" />}
 				</div>
 
-				<div className='hidden sm:flex gap-4 px-4'>
+				<div className='hidden md:flex gap-4 px-4'>
 					<a href={githubLink} className='cursor-pointer'>
 						<GithubIcon className='h-8 w-8'/>
 					</a>

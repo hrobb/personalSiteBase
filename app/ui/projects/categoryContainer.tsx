@@ -2,6 +2,7 @@ import ProjectCard from './projectCard'
 
 export interface Project {
 	id: number;
+	imgSrc: string[];
 	title: string;
 	skillsUsed?: string[];
 	description: string;
@@ -27,7 +28,7 @@ export default function CategoryContainer({
 	};
 
 	return (
-		<div className='container flex flex-col p-8'>
+		<div className='container flex flex-col p-4 sm:p-8'>
 			<h1 className='text-xl font-bold text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
 			{description && (
 				<p className='text-center md:text-left md:ml-16'>{description}</p>
@@ -37,6 +38,7 @@ export default function CategoryContainer({
 					<ProjectCard
 						key={index}
 						id={project.id}
+						imgSrc={project.imgSrc}
 						title={project.title}
 						skillsUsed={project.skillsUsed}
 						description={project.description}
