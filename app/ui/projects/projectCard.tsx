@@ -20,8 +20,9 @@ export default function ProjectCard ({
 
 	return (
 
-		<div className="card flex flex-col w-full justify-center items-center text-center bg-gray-100 border-2 border-gray-600/70 drop-shadow">
-			<div className="w-full mb-4">
+		<div className="card flex flex-col w-full 2xl:w-4/5 justify-center items-center text-center bg-gray-100 border-2 rounded border-gray-600/70 my-4 drop-shadow">
+			{/* Image carousel */}
+			<div className="w-full">
 				<Swiper
 					spaceBetween={10}
 					slidesPerView={1}
@@ -39,20 +40,19 @@ export default function ProjectCard ({
 				</Swiper>
 			</div>
 
-
-
-			<div className="flex flex-col w-full p-6">
-				{skillsUsed && (
-					<div className="flex justify-around">
-						<p className="">{title}</p>
-						<div>
-							{skillsUsed.map((skill, index) => (
-								<button key={index} className="m-6 px-6 py-3 text-white bg-gray-500 rounded-md">{skill}</button>
-							))}
-						</div>
+			{/* Lower informational section */}
+			<div className="flex flex-col sm:flex-row w-full border-t-2 border-gray p-6">		
+				<div className="flex flex-col mb-6">
+					<p className="text-2xl mb-2">{title}</p>
+					{skillsUsed && (
+					<div className='flex flex-wrap justify-center'>
+						{skillsUsed.map((skill, index) => (
+							<button key={index} className="m-3 px-6 py-3 text-white bg-gray-500 rounded-md">{skill}</button>
+						))}
 					</div>
-				)}
-				<p>{description}</p>
+					)}
+				</div>
+				<p className='flex sm:max-w-1/4'>{description}</p>
 			</div>
 		</div>
 	)

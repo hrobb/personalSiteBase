@@ -88,9 +88,12 @@
 					"title": "Project",
 					"skillsUsed": [
 						"Skills 1",
-						"Skill 2"
+						"Slightly longer Skill 2",
+						"Skill 3",
+						"skill 4",
+						"skill5"
 					],
-					"description": "Test Description"
+					"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo rhoncus nisi finibus maximus, adipiscing bibendum posuere bibendum. Finibus netus amet ornare pellentesque integer. Id sit fringilla lobortis adipiscing egestas class. Congue suspendisse vitae diam cursus convallis pharetra. Nisl cursus praesent fringilla luctus montes torquent. Ante habitant feugiat nibh curabitur, condimentum senectus hac malesuada."
 				},
 				{
 					"id": 700,
@@ -117,10 +120,6 @@
 						"/next.svg"
 					],
 					"title": "Project",
-					"skillsUsed": [
-						"Skills 1",
-						"Skill 2"
-					],
 					"description": "Test Description"
 				},
 				{
