@@ -41,8 +41,8 @@ export default function ProjectCard ({
 			</div>
 
 			{/* Lower informational section */}
-			<div className="flex flex-col sm:flex-row w-full border-t-2 border-gray p-6">		
-				<div className="flex flex-col mb-6">
+			<div className="flex flex-col md:flex-row w-full border-t-2 border-gray p-6">		
+				<div className="flex flex-col md:w-2/5 mb-6">
 					<p className="text-2xl mb-2">{title}</p>
 					{skillsUsed && (
 					<div className='flex flex-wrap justify-center'>
@@ -52,7 +52,7 @@ export default function ProjectCard ({
 					</div>
 					)}
 				</div>
-				<p className='flex sm:max-w-1/4'>{description}</p>
+				<p className='flex md:w-3/5'>{description}</p>
 			</div>
 		</div>
 	)
