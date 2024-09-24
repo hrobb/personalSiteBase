@@ -1,8 +1,8 @@
 import data from '../data.json';
-import CategoryContainer from '../ui/skills/categoryContainer';
+import CategoryContainer from '../ui/projects/categoryContainer';
 
-export default function Skills() {
-	const categories = data.skills;
+export default function Projects() {
+	const categories = data.projects;
 	
 	return (
 		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between px-4 py-16 sm:px-24">
@@ -11,7 +11,7 @@ export default function Skills() {
 					key={category}
 					categoryTitle={category}
 					description={categoryContents.description}
-					skillSet={categoryContents.skills}
+					projectSet={categoryContents.projects}
 				/>
 			))}
 		</main>
