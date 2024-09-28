@@ -1,21 +1,21 @@
-import SkillCard from './skillCard'
+import ProjectCard from './projectCard'
 
-export interface Skill {
+export interface Project {
 	id: number;
+	imgSrc: string[];
 	title: string;
-	iconName: string;
-	description?: string;
-	projects?: string[];
+	skillsUsed?: string[];
+	description: string;
 }
 
 export default function CategoryContainer({
 	categoryTitle,
 	description,
-	skillSet
+	projectSet
 }: {
 	categoryTitle: string,
-	description: string,
-	skillSet: Skill[]
+	description?: string,
+	projectSet: Project[]
 }) {
 
 	const formatTitle = (text: string): string => {
@@ -30,16 +30,18 @@ export default function CategoryContainer({
 	return (
 		<div className='container flex flex-col p-4 sm:p-8'>
 			<h1 className='text-xl font-bold text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
-			<p className='text-center md:text-left md:ml-16'>{description}</p>
+			{description && (
+				<p className='text-center md:text-left md:ml-16'>{description}</p>
+			)}
 			<div className='flex flex-wrap justify-center md:justify-evenly'>
-				{skillSet.map((skill, index) => (
-					<SkillCard
+				{projectSet.map((project, index) => (
+					<ProjectCard
 						key={index}
-						id={skill.id}
-						title={skill.title}
-						iconName={skill.iconName}
-						description={skill.description}
-						projects={skill.projects}
+						id={project.id}
+						imgSrc={project.imgSrc}
+						title={project.title}
+						skillsUsed={project.skillsUsed}
+						description={project.description}
 					/>
 				))}
 			</div>

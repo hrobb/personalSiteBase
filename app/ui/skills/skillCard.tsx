@@ -31,11 +31,11 @@ export default function SkillCard ({
 
 		<div className="cardContainer cursor-pointer transition transition-transform hover:scale-105 m-6 drop-shadow" onClick={handleClick}>
 			<div className={`card w-64 h-64 flex transition transition-transform duration-700 ${isFlipped ? 'flipped' : ''}`}>
-				<div className="cardFront flex flex-col absolute w-full h-full justify-center items-center bg-gray-100 border-2 border-gray-600/70 text-center p-6">
+				<div className="cardFront flex flex-col absolute w-full h-full justify-center items-center bg-gray-100 border-2 border-gray-600/70 text-center p-4">
 					<IconImport size={200}/>
-					<p>{title}</p>
+					<p className="text-xl pt-1">{title}</p>
 				</div>
-				<div className="cardBack flex flex-col absolute w-full h-full justify-center items-center bg-gray-100 border-2 border-gray-600/70 text-center p-6">
+				<div className="cardBack flex flex-col absolute w-full h-full justify-center items-center bg-gray-100 border-2 border-gray-600/70 text-center p-4">
 					{description && (
 						<p>{description}</p>
 					)}

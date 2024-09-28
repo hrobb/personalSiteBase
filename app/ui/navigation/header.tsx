@@ -2,22 +2,41 @@
 
 import { useEffect, useState } from "react";
 import Navlinks from "./navlinks";
-import {Icons} from "../icons";
+import { Icons } from "../icons";
+import { ReactIcons } from '../icons';
+import { IconType } from 'react-icons';
 
 export default function Header() {
 	const [nav,setNav] = useState(false);
-	const [slide,triggerSlide] = useState(false);
+	const [slideIn,triggerSlideIn] = useState(false);
+	const [slideOut, triggerSlideOut] = useState(false);
+
 	const SiteLogo = Icons.sampleLogo;
 	const NavOpen = Icons.chevronLeft;
 	const NavClose = Icons.close;
 
-	const handleSideMenu = () => {
-		setNav(!nav);
-		triggerSlide(true);
+	const GithubIcon: IconType = ReactIcons.githubLogo;
+	const githubLink = "https://www.github.com";
 
-		setTimeout(() => {
-			triggerSlide(false);
-		}, 500);
+	const LinkedInIcon: IconType = ReactIcons.linkedInLogo;
+	const linkedInLink = "https://www.linkedin.com";
+
+	const handleSideMenu = () => {
+
+		// If the nav is open, slide out animation, otherwise slide in
+		if (nav) {
+			triggerSlideOut(true);
+			setTimeout(() => {
+				setNav(false);
+				triggerSlideOut(false);
+			}, 500);
+		} else {
+			setNav(true);
+			triggerSlideIn(true);
+			setTimeout(() => {
+				triggerSlideIn(false);
+			}, 500);
+		}
 	}
 
 	// Be sure to turn off the nav if window is expanded
@@ -37,13 +56,13 @@ export default function Header() {
 	})
 
 	return (
-		<header className="p-2 bg-gray-200">
+		<header className="p-2 bg-gray-200 border-b border-black">
 			<div className="h-full px-4 flex flex-row items-center justify-between sm:justify-center">
 				<div className="flex p-4">
 					<SiteLogo className="w-10 h-10"/>
 				</div>
 			
-				<div className="hidden sm:flex flex-row grow items-center justify-center">
+				<div className="hidden sm:flex flex-row grow items-center justify-center px-4">
 					<Navlinks/>
 				</div>
 
@@ -53,9 +72,18 @@ export default function Header() {
 				>
 					{nav ? <NavClose className="w-10 h-10" /> : <NavOpen className="w-10 h-10" />}
 				</div>
+
+				<div className='hidden md:flex gap-4 px-4'>
+					<a href={githubLink} className='cursor-pointer'>
+						<GithubIcon className='h-8 w-8'/>
+					</a>
+					<a href={linkedInLink} className='cursor-pointer'>
+						<LinkedInIcon className='h-8 w-8 cursor-pointer'/>
+					</a>
+				</div>
 			</div>
 			{nav && (
-				<div className={`${slide ? 'animate-slide-in-from-above pointer-events-none cursor-default' : ''}`}>
+				<div className={`${slideIn ? 'animate-slide-in-from-above pointer-events-none cursor-default' : ''} ${slideOut ? 'animate-slide-out-to-above pointer-events-none cursor-default' : ''}`}>
 					<Navlinks/>
 				</div>
 			)}

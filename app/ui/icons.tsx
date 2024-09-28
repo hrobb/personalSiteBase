@@ -3,6 +3,7 @@ import {
 	Zap,
 	House,
 	ScrollText,
+	FolderGit,
 	BookCheck,
 	CircleUserRound,
 	X,
@@ -18,6 +19,7 @@ export const Icons = {
 	sampleLogo: Zap,
 	home: House,
 	experience: ScrollText,
+	projects: FolderGit,
 	skills: BookCheck,
 	aboutme: CircleUserRound,
 	close: X,
@@ -39,6 +41,8 @@ import {
 } from "react-icons/di"
 
 import {
+	SiGithub,
+	SiLinkedin,
 	SiJavascript,
 	SiPython,
 	SiMicrosoftonenote,
@@ -51,6 +55,8 @@ export type ReactIconsType = {
 }
 
 export const ReactIcons: ReactIconsType = {
+	githubLogo: SiGithub,
+	linkedInLogo: SiLinkedin,
 	htmlLogo: DiHtml5,
 	cssLogo: DiCss3,
 	jsLogo: SiJavascript,
