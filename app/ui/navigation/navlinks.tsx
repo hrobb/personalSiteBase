@@ -26,8 +26,8 @@ export default function Navlinks() {
 						key={link.name}
 						href={link.href}
 						className={clsx(
-							'flex w-full items-center justify-center gap-2 rounded-sm p-3 text-sm font-medium hover:bg-sky-100/70 hover:text-blue-600/70 sm:h-14 sm:p-2 sm:px-3',
-							pathname === link.href ? 'bg-gray-400/20' : 'bg-gray-50'
+							'flex w-full sm:w-32 items-center justify-center gap-2 rounded-lg p-3 text-sm font-medium transition transition-colors hover:bg-sky-100/70 hover:text-blue-600/70 sm:h-12 sm:p-2 sm:px-3',
+							pathname === link.href ? 'bg-gray-400/10' : 'bg-transparent'
 						)}
 					>
 						<LinkIcon className="w-8" />

@@ -62,7 +62,7 @@ export default function Header() {
 					<SiteLogo className="w-10 h-10"/>
 				</div>
 			
-				<div className="hidden sm:flex flex-row grow items-center justify-center px-4">
+				<div className="hidden sm:flex flex-row grow items-center justify-around px-4">
 					<Navlinks/>
 				</div>
 
