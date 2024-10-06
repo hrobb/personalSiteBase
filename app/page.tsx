@@ -4,28 +4,33 @@ import data from "./data.json";
 
 export default function Home() {
 
-	const cards = data.home.cards;
+	//const cards = data.home.cards;
+	const welcomeCard = data.home.welcomeCard;
 
 
 	return (
 		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between px-4 py-16 sm:px-24">
 
-			<div className="flex flex-row w-full">
-				<div className="flex flex-col w-3/4">
-					<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
-						<h1 className="text-2xl font-bold text-black">Sample Name</h1>
-						<h2 className="mt-2 text-xl text-gray-600/90">Hi there, welcome to the site!</h2>
-						<p className="mt-4 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo tempore reiciendis consectetur fugiat aliquid cupiditate? Distinctio enim voluptate et nobis modi ullam quia at earum, sequi autem dolore, laudantium provident.</p>
+			<div className='container p-4 md:p-8'>
+				<div className="flex flex-col md:flex-row w-full">
+					<div className="flex flex-col w-full md:w-3/4">
+						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
+							<h1 className="text-2xl font-bold text-black">{welcomeCard.name}</h1>
+							<h2 className="mt-2 text-xl text-gray-600/90">{welcomeCard.greeting}</h2>
+							{data.home.welcomeCard.description.map((desc, index) => (
+								<p className="mt-4 text-gray-500">{desc}</p>
+							))}
+						</div>
+						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
+							<h3 className="text-lg font-semibold text-gray-800">Highlight Projects?</h3>
+						</div>
 					</div>
-					<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
-						<h3 className="text-lg font-semibold text-gray-800">Highlight Projects?</h3>
-					</div>
-				</div>
 
-				<div className="flex w-1/4">
-					<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
-						<h3 className="text-lg font-semibold text-gray-800">Skills?</h3>
-						<p className="mt-2 text-gray-500">Test</p>
+					<div className="flex w-full md:w-1/4">
+						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
+							<h3 className="text-lg font-semibold text-gray-800">Skills?</h3>
+							<p className="mt-2 text-gray-500">Test</p>
+						</div>
 					</div>
 				</div>
 			</div>

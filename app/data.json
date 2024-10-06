@@ -1,14 +1,15 @@
 {
 	"home": {
-		"cards": [
-			{
-				"id": 1,
-				"title": "Testing Left Card",
-				"text": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and all data that will populate these objects throughout our time doing this.",
-				"imgSrc": "/next.svg",
-				"altText": "Filler logo?"
-			}
-		]
+		"welcomeCard": {
+			"id": 1,
+			"name": "Sample Name",
+			"greeting": "Hi there, welcome to the site!",
+			"description": [
+				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo tempore reiciendis consectetur fugiat aliquid cupiditate? Distinctio enim voluptate et nobis modi ullam quia at earum, sequi autem dolore, laudantium provident.",
+				"Lorem ipsum odor amet, consectetuer adipiscing elit. Quisque convallis curae commodo nec hendrerit aptent ante suspendisse elit. Eleifend dignissim pulvinar phasellus bibendum dictum. Sociosqu at class per nunc mauris. Elementum augue fames mattis dapibus montes ex mattis sagittis consequat. Consectetur nunc pellentesque consectetur gravida; ridiculus nisi neque per. Ac commodo luctus inceptos tellus elementum convallis dapibus. Euismod sodales fusce tortor ex quisque? Risus tempus hac penatibus; lobortis per dis suspendisse.",
+				"Incididunt cupidatat dolore quis occaecat dolor aliqua ullamco veniam laboris. Elit ullamco proident cillum est mollit anim laborum anim esse laboris ex voluptate ex. Proident quis anim laborum non proident. Consequat aliquip non sint voluptate aute nulla minim ea officia dolore sint anim pariatur tempor. Tempor enim anim nisi consectetur ullamco aute adipisicing esse deserunt anim."
+			]
+		}
 	},
 	"experience": {
 		"summaryCards": [
