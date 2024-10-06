@@ -18,7 +18,7 @@ export default function Home() {
 							<h1 className="text-2xl font-bold text-black">{welcomeCard.name}</h1>
 							<h2 className="mt-2 text-xl text-gray-600/90">{welcomeCard.greeting}</h2>
 							{data.home.welcomeCard.description.map((desc, index) => (
-								<p className="mt-4 text-gray-500">{desc}</p>
+								<p key={desc.id} className="mt-4 text-gray-500">{desc.text}</p>
 							))}
 						</div>
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
