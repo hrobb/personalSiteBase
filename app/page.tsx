@@ -2,10 +2,43 @@ import Image from "next/image";
 import Card from "@/app/ui/card";
 import data from "./data.json";
 
-export default function Home() {
+import SkillCard from "./ui/skills/skillCard";
 
+export default function Home() {
+	// Imported Data
 	//const cards = data.home.cards;
 	const welcomeCard = data.home.welcomeCard;
+	const selectedSkills = data.home.skillHighlight;
+
+	// Skill section
+	const skillCards = data.skills;
+
+	interface Skill {
+		id: number;
+		title: string;
+		iconName: string;
+		description: string;
+		projects?: string[];
+	}
+
+	function filterSkills(skills: Skill[]): Skill[] {
+		return skills.filter(skill => selectedSkills.includes(skill.id));
+	}
+
+	function getFilteredSkills(): Skill[] {
+		const topSkills: Skill[] = [];
+		const categories = Object.keys(skillCards) as (keyof typeof skillCards)[];
+
+		categories.forEach(category => {
+			const filteredSkills = filterSkills(skillCards[category].skills);
+			topSkills.push(...filteredSkills);
+		});
+
+		return topSkills;
+	}
+
+	const topSkills = getFilteredSkills();
+	
 
 
 	return (
@@ -30,6 +63,20 @@ export default function Home() {
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
 							<h3 className="text-lg font-semibold text-gray-800">Skills?</h3>
 							<p className="mt-2 text-gray-500">Test</p>
+							<div className="flex flex-wrap justify-center gap-4">
+								{topSkills.map((skill, index) => (
+									<div key={index} className="skillContainer flex shrink">
+										<SkillCard
+											key={index}
+											id={skill.id}
+											title={skill.title}
+											iconName={skill.iconName}
+											description={skill.description}
+											projects={skill.projects}
+										/>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
