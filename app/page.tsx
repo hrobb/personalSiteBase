@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import Card from "@/app/ui/card";
 import data from "./data.json";
 
 import SkillCard from "./ui/skills/skillCard";
+import SkillBadge from "./ui/home/skillBadge";
 
 export default function Home() {
 	// Imported Data
@@ -42,11 +44,11 @@ export default function Home() {
 
 
 	return (
-		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between px-4 py-16 sm:px-24">
+		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between px-4 py-16 lg:px-24">
 
-			<div className='container p-4 md:p-8'>
-				<div className="flex flex-col md:flex-row w-full">
-					<div className="flex flex-col w-full md:w-3/4">
+			<div className='container p-4 lg:p-8'>
+				<div className="flex flex-col lg:flex-row w-full">
+					<div className="flex flex-col w-full lg:w-3/4">
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
 							<h1 className="text-2xl font-bold text-black">{welcomeCard.name}</h1>
 							<h2 className="mt-2 text-xl text-gray-600/90">{welcomeCard.greeting}</h2>
@@ -59,20 +61,21 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="flex w-full md:w-1/4">
+					<div className="flex w-full lg:w-1/4">
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
-							<h3 className="text-lg font-semibold text-gray-800">Skills?</h3>
-							<p className="mt-2 text-gray-500">Test</p>
-							<div className="flex flex-wrap justify-center gap-4">
+							<h3 className="text-lg font-semibold text-gray-800">Top Skills</h3>
+							<p className="mt-2 text-gray-500">
+								Be sure to check out the <Link href="/skills" className="text-blue-500">skills</Link> page for more skills and how I've employed these.
+							</p>
+							<div className="flex flex-row flex-wrap justify-center">
 								{topSkills.map((skill, index) => (
-									<div key={index} className="skillContainer flex shrink">
-										<SkillCard
+									// These may not be reusable if it doesn't configure well.. may need to just create a serviceable "badge" for the home page. Still would be great since it'd be pulling info and should mostly be reusable!
+									<div key={index} className="skillContainer m-4">
+										<SkillBadge
 											key={index}
 											id={skill.id}
 											title={skill.title}
 											iconName={skill.iconName}
-											description={skill.description}
-											projects={skill.projects}
 										/>
 									</div>
 								))}
