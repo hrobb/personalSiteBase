@@ -21,7 +21,13 @@
 				}
 			]
 		},
-		"skillHighlight": [10,15,17]
+		"projectCard": {
+			"projectHighlight": [700,702]
+
+		},
+		"skillCard": {
+			"skillHighlight": [10,15,17]
+		}
 	},
 	"experience": {
 		"summaryCards": [
@@ -109,12 +115,12 @@
 					"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo rhoncus nisi finibus maximus, adipiscing bibendum posuere bibendum. Finibus netus amet ornare pellentesque integer. Id sit fringilla lobortis adipiscing egestas class. Congue suspendisse vitae diam cursus convallis pharetra. Nisl cursus praesent fringilla luctus montes torquent. Ante habitant feugiat nibh curabitur, condimentum senectus hac malesuada."
 				},
 				{
-					"id": 700,
+					"id": 701,
 					"imgSrc": [
 						"images/school.png",
 						"/next.svg"
 					],
-					"title": "Project",
+					"title": "Project 2",
 					"skillsUsed": [
 						"Skills 1",
 						"Skill 2"
@@ -127,21 +133,21 @@
 			"description": "",
 			"projects": [
 				{
-					"id": 700,
+					"id": 702,
 					"imgSrc": [
 						"images/school.png",
 						"/next.svg"
 					],
-					"title": "Project",
+					"title": "Project 3",
 					"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Pharetra volutpat rhoncus ullamcorper vestibulum tempor ex est. In sollicitudin sagittis aptent nec, eros dictum. Magna donec massa, mollis ultrices accumsan odio. At lacus scelerisque ut himenaeos luctus enim. Interdum volutpat egestas congue ipsum donec tellus. Mauris lorem sapien facilisis mattis ridiculus a feugiat. Vehicula augue habitant augue efficitur ultrices magnis quam pulvinar. Egestas sed habitant ante dapibus ornare."
 				},
 				{
-					"id": 700,
+					"id": 703,
 					"imgSrc": [
 						"images/school.png",
 						"/next.svg"
 					],
-					"title": "Project",
+					"title": "Project 4",
 					"skillsUsed": [
 						"Skills 1",
 						"Skill 2"

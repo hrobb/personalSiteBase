@@ -3,14 +3,49 @@ import Link from "next/link";
 import Card from "@/app/ui/card";
 import data from "./data.json";
 
-import SkillCard from "./ui/skills/skillCard";
+import ProjectCard from "./ui/projects/projectCard";
+
 import SkillBadge from "./ui/home/skillBadge";
 
 export default function Home() {
 	// Imported Data
 	//const cards = data.home.cards;
 	const welcomeCard = data.home.welcomeCard;
-	const selectedSkills = data.home.skillHighlight;
+	const projectCard = data.home.projectCard;
+	const skillCard = data.home.skillCard;
+	
+	const selectedProjects = data.home.projectCard.projectHighlight;
+	const selectedSkills = data.home.skillCard.skillHighlight;
+	
+	// These can almost certainly be generalized and combined, will look into this later
+	// Project section
+	const projectCards = data.projects;
+
+	interface Project {
+		id: number;
+		imgSrc: string[];
+		title: string;
+		skillsUsed?: string[];
+		description: string;
+	}
+
+	function filterProjects(projects: Project[]): Project[] {
+		return projects.filter(project => selectedProjects.includes(project.id));
+	}
+
+	function getFilteredProjects(): Project[] {
+		const topProjects: Project[] = []
+		const categories = Object.keys(projectCards) as (keyof typeof projectCards)[];
+
+		categories.forEach(category => {
+			const filteredProjects = filterProjects(projectCards[category].projects);
+			topProjects.push(...filteredProjects);
+		});
+
+		return topProjects;
+	}
+
+	const topProjects = getFilteredProjects();
 
 	// Skill section
 	const skillCards = data.skills;
@@ -57,7 +92,22 @@ export default function Home() {
 							))}
 						</div>
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
-							<h3 className="text-lg font-semibold text-gray-800">Highlight Projects?</h3>
+							<h3 className="text-lg font-semibold text-gray-800">Project Highlights</h3>
+							<p className="mt-2 text-gray-500">
+								Be sure to check out the <Link href="/projects" className="text-blue-500">projects</Link> page for more projects that I've worked on.
+							</p>
+							<div className="flex flex-col justify-center items-center">
+								{topProjects.map((project, index) => (
+									<ProjectCard
+										key={index}
+										id={project.id}
+										imgSrc={project.imgSrc}
+										title={project.title}
+										skillsUsed={project.skillsUsed}
+										description={project.description}
+									/>
+								))}
+							</div>
 						</div>
 					</div>
 
@@ -69,7 +119,6 @@ export default function Home() {
 							</p>
 							<div className="flex flex-row flex-wrap justify-center">
 								{topSkills.map((skill, index) => (
-									// These may not be reusable if it doesn't configure well.. may need to just create a serviceable "badge" for the home page. Still would be great since it'd be pulling info and should mostly be reusable!
 									<div key={index} className="skillContainer m-4">
 										<SkillBadge
 											key={index}
