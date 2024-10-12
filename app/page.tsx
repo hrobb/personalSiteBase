@@ -9,74 +9,29 @@ import SkillBadge from "./ui/home/skillBadge";
 
 export default function Home() {
 	// Imported Data
-	//const cards = data.home.cards;
-	const welcomeCard = data.home.welcomeCard;
-	const projectCard = data.home.projectCard;
-	const skillCard = data.home.skillCard;
+	const { welcomeCard, projectCard, skillCard } = data.home
 	
 	const selectedProjects = data.home.projectCard.projectHighlight;
 	const selectedSkills = data.home.skillCard.skillHighlight;
 	
-	// These can almost certainly be generalized and combined, will look into this later
-	// Project section
-	const projectCards = data.projects;
 
-	interface Project {
-		id: number;
-		imgSrc: string[];
-		title: string;
-		skillsUsed?: string[];
-		description: string;
+	// Filter a given set of cards based on if their ID is included in the "top" array 
+	function filterCards<T extends {id: number}>(cards: T[], selectedIDs: number[]): T[] {
+		return cards.filter(card => selectedIDs.includes(card.id));
 	}
 
-	function filterProjects(projects: Project[]): Project[] {
-		return projects.filter(project => selectedProjects.includes(project.id));
-	}
+	// Fetch chosen projects
+	const topProjects = filterCards(
+		Object.values(data.projects).flatMap(category => category.projects), 
+		selectedProjects
+	);
 
-	function getFilteredProjects(): Project[] {
-		const topProjects: Project[] = []
-		const categories = Object.keys(projectCards) as (keyof typeof projectCards)[];
-
-		categories.forEach(category => {
-			const filteredProjects = filterProjects(projectCards[category].projects);
-			topProjects.push(...filteredProjects);
-		});
-
-		return topProjects;
-	}
-
-	const topProjects = getFilteredProjects();
-
-	// Skill section
-	const skillCards = data.skills;
-
-	interface Skill {
-		id: number;
-		title: string;
-		iconName: string;
-		description: string;
-		projects?: string[];
-	}
-
-	function filterSkills(skills: Skill[]): Skill[] {
-		return skills.filter(skill => selectedSkills.includes(skill.id));
-	}
-
-	function getFilteredSkills(): Skill[] {
-		const topSkills: Skill[] = [];
-		const categories = Object.keys(skillCards) as (keyof typeof skillCards)[];
-
-		categories.forEach(category => {
-			const filteredSkills = filterSkills(skillCards[category].skills);
-			topSkills.push(...filteredSkills);
-		});
-
-		return topSkills;
-	}
-
-	const topSkills = getFilteredSkills();
+	// Fetch chosen skills
+	const topSkills = filterCards(
+		Object.values(data.skills).flatMap(category => category.skills),
+		selectedSkills
+	);
 	
-
 
 	return (
 		<main className="flex min-h-screen h-full max-w-9xl flex-col items-center justify-between px-4 py-16 lg:px-24">
@@ -87,7 +42,7 @@ export default function Home() {
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
 							<h1 className="text-2xl font-bold text-black">{welcomeCard.name}</h1>
 							<h2 className="mt-2 text-xl text-gray-600/90">{welcomeCard.greeting}</h2>
-							{data.home.welcomeCard.description.map((desc, index) => (
+							{welcomeCard.description.map((desc, index) => (
 								<p key={desc.id} className="mt-4 text-gray-500">{desc.text}</p>
 							))}
 						</div>
