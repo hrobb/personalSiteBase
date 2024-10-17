@@ -1,14 +1,33 @@
 {
 	"home": {
-		"cards": [
-			{
-				"id": 1,
-				"title": "Testing Left Card",
-				"text": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and all data that will populate these objects throughout our time doing this.",
-				"imgSrc": "/next.svg",
-				"altText": "Filler logo?"
-			}
-		]
+		"welcomeCard": {
+			"id": 1,
+			"name": "Sample Name",
+			"greeting": "Hi there, welcome to the site!",
+			"description": [
+				{
+					"id": 1,
+					"text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo tempore reiciendis consectetur fugiat aliquid cupiditate? Distinctio enim voluptate et nobis modi ullam quia at earum, sequi autem dolore, laudantium provident."
+
+				},
+				{
+					"id": 2,
+					"text": "Lorem ipsum odor amet, consectetuer adipiscing elit. Quisque convallis curae commodo nec hendrerit aptent ante suspendisse elit. Eleifend dignissim pulvinar phasellus bibendum dictum. Sociosqu at class per nunc mauris. Elementum augue fames mattis dapibus montes ex mattis sagittis consequat. Consectetur nunc pellentesque consectetur gravida; ridiculus nisi neque per. Ac commodo luctus inceptos tellus elementum convallis dapibus. Euismod sodales fusce tortor ex quisque? Risus tempus hac penatibus; lobortis per dis suspendisse."
+
+				},
+				{
+					"id": 3,
+					"text": "Incididunt cupidatat dolore quis occaecat dolor aliqua ullamco veniam laboris. Elit ullamco proident cillum est mollit anim laborum anim esse laboris ex voluptate ex. Proident quis anim laborum non proident. Consequat aliquip non sint voluptate aute nulla minim ea officia dolore sint anim pariatur tempor. Tempor enim anim nisi consectetur ullamco aute adipisicing esse deserunt anim."
+				}
+			]
+		},
+		"projectCard": {
+			"projectHighlight": [700,702]
+
+		},
+		"skillCard": {
+			"skillHighlight": [10,15,17]
+		}
 	},
 	"experience": {
 		"summaryCards": [
@@ -33,7 +52,7 @@
 				"skillsUsed": "HTML, Javascript",
 				"timeframe": "01/01/2000 - 01/01/2004",
 				"location": "Earth, Solar System",
-				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and all data that will populate these objects throughout our time doing this.",
+				"shortText": "Fugiat id quis excepteur tempor. Exercitation nisi consectetur exercitation deserunt officia fugiat deserunt cillum non minim cupidatat minim consectetur esse. Consequat proident incididunt cupidatat in ipsum ipsum sint commodo. Ad ut incididunt est laborum Lorem qui cupidatat ea enim ea. Amet minim ipsum proident deserunt aliqua exercitation duis est nisi irure veniam eu sit. Enim id duis laborum id proident do commodo eiusmod voluptate ipsum sint.",
 				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Quisque convallis curae commodo nec hendrerit aptent ante suspendisse elit. Eleifend dignissim pulvinar phasellus bibendum dictum. Sociosqu at class per nunc mauris. Elementum augue fames mattis dapibus montes ex mattis sagittis consequat. Consectetur nunc pellentesque consectetur gravida; ridiculus nisi neque per. Ac commodo luctus inceptos tellus elementum convallis dapibus. Euismod sodales fusce tortor ex quisque? Risus tempus hac penatibus; lobortis per dis suspendisse."
 			},
 
@@ -45,7 +64,7 @@
 				"skillsUsed": "HTML, CSS, Python, Javascript, HTML, Javascript",
 				"timeframe": "01/01/2000 - 01/01/2004",
 				"location": "Earth, Solar System",
-				"shortText": "Here's a bunch of test textenient to store any and all data that will populate these objects throughout our time doing this.",
+				"shortText": "Lorem dolor commodo pariatur occaecat consequat. Veniam laborum veniam ad excepteur ea pariatur in. Sint laborum laborum occaecat ea eu tempor pariatur magna ex adipisicing ullamco non consequat laboris.",
 				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Et quis imperdiet, nec ultricies efficitur \n montes at aptent. Suscipit tempor morbi congue nascetur nascetur eget. Neque praesent himenaeos ultricies; sagittis porta consequat bibendum. Placerat placerat placerat finibus, magna felis euismod ornare eleifend. Maecenas tortor arcu ullamcorper id augue bibendum? Euismod eleifend non placerat ipsum placerat auctor ante. Pellentesque torquent mollis euismod rhoncus montes pretium. Tristique luctus litora mauris condimentum sagittis inceptos etiam vel."
 			},
 
@@ -57,7 +76,7 @@
 				"skillsUsed": "HTML, Javascript",
 				"timeframe": "01/01/2000 - 01/01/2004",
 				"location": "Earth, Solar System",
-				"shortText": "Here's a bunch of test text that we'll need to refactor later but for now we just need it to be really long and exhaustive. Ooo a JSON would be really convenient to store any and this.",
+				"shortText": "Aute exercitation veniam incididunt deserunt reprehenderit nulla irure non sit sunt elit elit. Ad incididunt amet veniam fugiat adipisicing voluptate sint minim incididunt laborum officia incididunt ex enim. Voluptate anim ad non ipsum eu officia. Anim velit ullamco incididunt anim aute in sunt in. Fugiat Lorem amet amet mollit elit. Ex ullamco eu occaecat cupidatat ullamco mollit mollit irure tempor ipsum elit.",
 				"longText": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suscipit tempor habitasse vestibulum pellentesque proin morbi? Id mi hendrerit maecenas at pellentesque consequat feugiat vulputate. Nec curabitur fames condimentum sodales montes ut ad arcu habitasse. Nibh ut dictum, mollis fringilla aenean purus. Ac conubia in senectus class justo vel elementum. Rutrum volutpat potenti pulvinar elementum varius curae; lacinia mollis ut. Scelerisque augue class; maecenas fusce nulla nec."
 			},
 
@@ -96,12 +115,12 @@
 					"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo rhoncus nisi finibus maximus, adipiscing bibendum posuere bibendum. Finibus netus amet ornare pellentesque integer. Id sit fringilla lobortis adipiscing egestas class. Congue suspendisse vitae diam cursus convallis pharetra. Nisl cursus praesent fringilla luctus montes torquent. Ante habitant feugiat nibh curabitur, condimentum senectus hac malesuada."
 				},
 				{
-					"id": 700,
+					"id": 701,
 					"imgSrc": [
 						"images/school.png",
 						"/next.svg"
 					],
-					"title": "Project",
+					"title": "Project 2",
 					"skillsUsed": [
 						"Skills 1",
 						"Skill 2"
@@ -114,21 +133,21 @@
 			"description": "",
 			"projects": [
 				{
-					"id": 700,
+					"id": 702,
 					"imgSrc": [
 						"images/school.png",
 						"/next.svg"
 					],
-					"title": "Project",
+					"title": "Project 3",
 					"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Pharetra volutpat rhoncus ullamcorper vestibulum tempor ex est. In sollicitudin sagittis aptent nec, eros dictum. Magna donec massa, mollis ultrices accumsan odio. At lacus scelerisque ut himenaeos luctus enim. Interdum volutpat egestas congue ipsum donec tellus. Mauris lorem sapien facilisis mattis ridiculus a feugiat. Vehicula augue habitant augue efficitur ultrices magnis quam pulvinar. Egestas sed habitant ante dapibus ornare."
 				},
 				{
-					"id": 700,
+					"id": 703,
 					"imgSrc": [
 						"images/school.png",
 						"/next.svg"
 					],
-					"title": "Project",
+					"title": "Project 4",
 					"skillsUsed": [
 						"Skills 1",
 						"Skill 2"
@@ -153,7 +172,7 @@
 					]
 				},
 				{
-					"id": 10,
+					"id": 11,
 					"title": "HTML",
 					"iconName": "htmlLogo",
 					"description": "",
@@ -163,7 +182,7 @@
 					]
 				},
 				{
-					"id": 10,
+					"id": 12,
 					"title": "HTML",
 					"iconName": "htmlLogo",
 					"description": ""
@@ -179,7 +198,7 @@
 					]
 				},
 				{
-					"id": 13,
+					"id": 14,
 					"title": "Javascript",
 					"iconName": "jsLogo",
 					"description": "JS is a lot of fun",
@@ -194,7 +213,7 @@
 			"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Pharetra volutpat rhoncus ullamcorper vestibulum tempor ex est. In sollicitudin sagittis aptent nec, eros dictum. Magna donec massa, mollis ultrices accumsan odio. At lacus scelerisque ut himenaeos luctus enim. Interdum volutpat egestas congue ipsum donec tellus. Mauris lorem sapien facilisis mattis ridiculus a feugiat. Vehicula augue habitant augue efficitur ultrices magnis quam pulvinar. Egestas sed habitant ante dapibus ornare.",
 			"skills": [
 				{
-					"id": 11,
+					"id": 15,
 					"title": "SQL",
 					"iconName": "sqlLogo",
 					"description": "",
@@ -204,7 +223,7 @@
 					]
 				},
 				{
-					"id": 11,
+					"id": 16,
 					"title": "Python",
 					"iconName": "pythonLogo",
 					"description": "",
@@ -219,7 +238,7 @@
 			"description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Integer lacinia in penatibus sagittis vulputate malesuada porttitor magnis. Litora commodo per potenti felis metus eget morbi interdum. Id nam scelerisque litora natoque pharetra, torquent at. Dui duis amet auctor non purus lacus quis. Scelerisque pulvinar dis efficitur vestibulum cubilia. Nostra ornare posuere dui integer at finibus.",
 			"skills": [
 				{
-					"id": 12,
+					"id": 17,
 					"title": "Documentation",
 					"iconName": "documentation",
 					"description": "",
@@ -229,7 +248,7 @@
 					]
 				},
 				{
-					"id": 12,
+					"id": 18,
 					"title": "Postman",
 					"iconName": "postman",
 					"description": "",
