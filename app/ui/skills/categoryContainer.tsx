@@ -14,7 +14,7 @@ export default function CategoryContainer({
 	skillSet
 }: {
 	categoryTitle: string,
-	description: string,
+	description: {id: number, text: string}[],
 	skillSet: Skill[]
 }) {
 
@@ -30,7 +30,9 @@ export default function CategoryContainer({
 	return (
 		<div className='container flex flex-col p-4 sm:p-8'>
 			<h1 className='text-xl font-bold text-center md:text-left md:ml-12'>{formatTitle(categoryTitle)}</h1>
-			<p className='text-center md:text-left md:ml-16'>{description}</p>
+			{description.map((desc, index) => (
+				<p key={desc.id} className='mt-4 text-center md:text-left md:ml-16'>{desc.text}</p>
+			))}
 			<div className='flex flex-wrap justify-center md:justify-evenly'>
 				{skillSet.map((skill, index) => (
 					<SkillCard

@@ -18,15 +18,15 @@ export default function ExperienceCard({
 	longText
 }: {
 	index: number,
-	orientation: 'left' | 'right';
-	title: string;
-	imgSrc: string;
-	altText: string;
-	skillsUsed: string;
-	timeframe: string;
-	location: string;
-	shortText: string;
-	longText: string;
+	orientation: 'left' | 'right',
+	title: string,
+	imgSrc: string,
+	altText: string,
+	skillsUsed: string,
+	timeframe: string,
+	location: string,
+	shortText: string,
+	longText: {id: number, text: string}[]
 }) {
 	const SkillsIcon = Icons.code;
 	const Timeframe = Icons.timeframe;
@@ -93,7 +93,9 @@ export default function ExperienceCard({
 
 				<div className={`transition-max-height duration-[600ms] ease-in-out overflow-hidden ${expand ? 'max-h-screen' : 'max-h-0'}`}>
 					<div className='mx-auto p-2'>
-					<p>{longText}</p>
+					{longText.map((LText, index) => (
+						<p className='mt-2'>{LText.text}</p>
+					))}
 					</div>
 				</div>
 

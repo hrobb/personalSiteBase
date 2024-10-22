@@ -12,8 +12,8 @@ export default function Experience() {
 		<main className='relative min-h-screen h-full max-w-9xl'>
 			<div className='flex items-center justify-between px-16 py-4 sm:px-24'>
 				<SummaryCard
-					title = {summaryCard.title}
-					text = {summaryCard.text}
+					title={summaryCard.title}
+					description={summaryCard.description}
 				/>
 			</div>
 			
@@ -28,9 +28,9 @@ export default function Experience() {
 						title={card.title}
 						imgSrc={card.imgSrc}
 						altText={card.altText}
-						skillsUsed = {card.skillsUsed}
-						timeframe = {card.timeframe}
-						location = {card.location}
+						skillsUsed={card.skillsUsed}
+						timeframe={card.timeframe}
+						location={card.location}
 						shortText={card.shortText}
 						longText={card.longText}
 					/>
@@ -39,8 +39,8 @@ export default function Experience() {
 
 			<div className='flex items-center justify-between px-16 py-4 sm:px-24'>
 				<SummaryCard
-					title = {futureCard.title}
-					text = {futureCard.text}
+					title={futureCard.title}
+					description={futureCard.description}
 				/>
 			</div>
 
