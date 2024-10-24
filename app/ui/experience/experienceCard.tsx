@@ -94,7 +94,7 @@ export default function ExperienceCard({
 				<div className={`transition-max-height duration-[600ms] ease-in-out overflow-hidden ${expand ? 'max-h-screen' : 'max-h-0'}`}>
 					<div className='mx-auto p-2'>
 					{longText.map((LText, index) => (
-						<p className='mt-2'>{LText.text}</p>
+						<p key={LText.id} className='mt-2'>{LText.text}</p>
 					))}
 					</div>
 				</div>

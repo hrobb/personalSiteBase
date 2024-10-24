@@ -11,7 +11,7 @@ export default function SummaryCard({
 			<div className="p-4">
 				<h1 className='text-3xl font-bold'>{title}</h1>
 				{description.map((desc, index) => (
-					<p className="mt-2">{desc.text}</p>
+					<p key={desc.id} className="mt-2">{desc.text}</p>
 				))}
 			</div>
 		</div>

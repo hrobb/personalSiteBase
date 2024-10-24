@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project that we've created to serve as a template for a personal website. Though it is designed primarily with software developers in mind, it could be reconfigured to work for other professions quite easily. The following instructions will walk you through, step-by-step, how you can adopt, build, and personalize this template for your own use.
 
 ## Getting Started
 
