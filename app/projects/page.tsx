@@ -1,5 +1,10 @@
+import { Metadata } from 'next';
 import data from '../data.json';
 import CategoryContainer from '../ui/projects/categoryContainer';
+
+export const metadata: Metadata = {
+	title: "Projects"
+}
 
 export default function Projects() {
 	const categories = data.projects;

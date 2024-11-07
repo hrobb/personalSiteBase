@@ -1,11 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 import Card from "@/app/ui/card";
 import data from "./data.json";
 
 import ProjectCard from "./ui/projects/projectCard";
 
 import SkillBadge from "./ui/home/skillBadge";
+
+export const metadata: Metadata = {
+	title: "Home | Personal Site Base"
+}
 
 export default function Home() {
 	// Imported Data
@@ -43,7 +48,6 @@ export default function Home() {
 							<h1 className="text-2xl font-bold text-black">{welcomeCard.name}</h1>
 							<h2 className="mt-2 text-xl text-gray-600/90">{welcomeCard.greeting}</h2>
 							{welcomeCard.description.map((desc, index) => (
-								// ADD KEYS FOR OTHER STUFF AS WE DO HERE
 								<p key={desc.id} className="mt-4 text-gray-500">{desc.text}</p>
 							))}
 						</div>

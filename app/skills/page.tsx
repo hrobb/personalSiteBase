@@ -1,5 +1,10 @@
+import { Metadata } from 'next';
 import data from '../data.json';
 import CategoryContainer from '../ui/skills/categoryContainer';
+
+export const metadata: Metadata = {
+	title: "Skills"
+}
 
 export default function Skills() {
 	const categories = data.skills;

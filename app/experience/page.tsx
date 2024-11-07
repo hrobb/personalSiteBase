@@ -1,7 +1,11 @@
+import { Metadata } from 'next';
 import data from '../data.json';
 import SummaryCard from '../ui/experience/summaryCard';
 import ExperienceCard from '../ui/experience/experienceCard';
 
+export const metadata: Metadata = {
+	title: "Experience"
+}
 
 export default function Experience() {
 	const summaryCard = data.experience.summaryCards[0];

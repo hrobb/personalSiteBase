@@ -10,8 +10,21 @@ const helvetica = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Site Base",
+  title: {
+    template: "%s | Personal Site Base",
+    default: "Personal Site Base"
+  },
   description: "Base template for a personal website to be utilized by developers",
+  openGraph: {
+    title: "Personal Site Base",
+    description: "Base template for a personal website to be utilized by developers",
+    url: "https://localhost:3000/",
+    siteName: "Personal Site Base",
+    // Feel free to include images below
+    //images: []
+    locale: "en_US",
+    type: "website"
+  }
 };
 
 export default function RootLayout({

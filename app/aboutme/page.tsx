@@ -1,8 +1,12 @@
-
+import { Metadata } from "next";
 import data from "../data.json";
 import TextSection from "../ui/textsection";
 import Image from 'next/image';
 import { Underline } from "lucide-react";
+
+export const metadata: Metadata = {
+	title: "About Me"
+}
 
 export default function AboutMe() {
 	const cards = data.aboutme.textsections;
