@@ -30,6 +30,7 @@ export default function Experience() {
 						index={index}
 						orientation={index % 2 == 0 ? 'left' : 'right'}
 						title={card.title}
+						position={card.position}
 						imgSrc={card.imgSrc}
 						altText={card.altText}
 						skillsUsed={card.skillsUsed}

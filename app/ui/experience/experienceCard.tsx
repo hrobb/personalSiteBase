@@ -9,6 +9,7 @@ export default function ExperienceCard({
 	index,
 	orientation,
 	title,
+	position,
 	imgSrc,
 	altText,
 	skillsUsed,
@@ -20,6 +21,7 @@ export default function ExperienceCard({
 	index: number,
 	orientation: 'left' | 'right',
 	title: string,
+	position?: string,
 	imgSrc: string,
 	altText: string,
 	skillsUsed: string,
@@ -73,6 +75,7 @@ export default function ExperienceCard({
 					</div>
 					<div className="md:w-3/4 p-2">
 						<h1 className='text-2xl font-bold pb-2'>{title}</h1>
+						<h2 className='text-lg text-gray-700 pb-2'>{position}</h2>
 						<div className='pb-2'>
 							<p>{shortText}</p>
 						</div>
