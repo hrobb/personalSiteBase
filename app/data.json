@@ -328,12 +328,39 @@
 			]
 		}
 	},
-	"aboutme": {
+	"biography": {
 		"textsections": [
 			{
 				"id": 1,
 				"title": "Biography",
 				"text": "Vel vel est tempora sit et. Sapiente dolores sit voluptatum quae perferendis quas. Nisi qui provident aut. Ratione unde consequatur velit error in assumenda non quia. Rerum ex qui soluta est deleniti. Velit expedita eum ut molestiae ab doloremque."
+			}
+		]
+	},
+	"contacts": {
+		"socialmedialink": [
+			{
+				"linkTitle":"LinkedIn",
+				"link":"https://www.linkedin.com/",
+				"src":"/images/defaultprofile.png"
+			},
+			
+			{
+				"linkTitle":"GitHub",
+				"link":"https://github.com",
+				"src":"/images/defaultprofile.png"
+			},
+			
+			{
+				"linkTitle":"Facebook",
+				"link":"https://www.facebook.com/",
+				"src":"/images/defaultprofile.png"
+			},
+			
+			{
+				"linkTitle":"Instagram",
+				"link":"https://www.instagram.com",
+				"src":"/images/defaultprofile.png"
 			}
 		]
 	}
