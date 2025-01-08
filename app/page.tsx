@@ -54,7 +54,7 @@ export default function Home() {
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
 							<h3 className="text-lg font-semibold text-gray-800">Project Highlights</h3>
 							<p className="mt-2 text-gray-500">
-								Be sure to check out the <Link href="/projects" className="text-blue-500">projects</Link> page for more projects that I've worked on.
+								Be sure to check out the <Link href="/projects" className="text-blue-500">projects</Link> page for more projects that I&apos;ve worked on.
 							</p>
 							<div className="flex flex-col justify-center items-center">
 								{topProjects.map((project, index) => (
@@ -75,7 +75,7 @@ export default function Home() {
 						<div className="bg-white rounded-lg border border-gray-500/30 p-6 w-full">
 							<h3 className="text-lg font-semibold text-gray-800">Top Skills</h3>
 							<p className="mt-2 text-gray-500">
-								Be sure to check out the <Link href="/skills" className="text-blue-500">skills</Link> page for more skills and how I've employed these.
+								Be sure to check out the <Link href="/skills" className="text-blue-500">skills</Link> page for more skills and how I&apos;ve employed these.
 							</p>
 							<div className="flex flex-row flex-wrap justify-center">
 								{topSkills.map((skill, index) => (
